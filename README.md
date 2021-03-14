@@ -175,6 +175,13 @@ This is column 2.
 {{< endcolumn >}}
 ```
 
+### PageSpeed Improvements
+
+The following improvements help improve PageSpeed Insight scores:
+
+* The `logoheight` and `logowidth` params in `config.toml`  
+
+
 ## About
 
 This is an adaptation of the Jekyll theme [Beautiful Jekyll](https://deanattali.com/beautiful-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme, and many new features. It has diverged from the Jekyll theme over time, with years of community updates.
