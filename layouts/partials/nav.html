@@ -66,7 +66,11 @@
       <div class="avatar-container">
         <div class="avatar-img-border">
           <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
+            {{ if and (isset .Site.Params "logoheight") (isset .Site.Params "logowidth") }}
+            <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="height: {{ .Site.Params.logoheight }}px; width: {{ .Site.Params.logowidth }}px;" />
+            {{ else}}
             <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
+            {{ end }}
           </a>
         </div>
       </div>
