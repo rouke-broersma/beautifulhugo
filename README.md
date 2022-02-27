@@ -81,29 +81,25 @@ If you need to put a Disclaimer on your website (e.g. "My views are my own and n
 * If you need to adjust the disclaimer's styling, modify the declarations within the `footer div.disclaimer` selector in `static/css/main.css`.
 
 > The code for the disclaimer text is in `layouts/partials/footer.html`.  Moving this code block to another partial file (or relocating it within `footer.html`) will require changes to the css selector in `main.css` as well.
-### Utterances Commenting Support
+### Giscus Commenting Support
 
-If you wish use [Utterances](https://github.com/utterance/utterances) comments on your site, you'll need to perform the following:
+If you wish use [Giscus](https://giscus.app/) comments on your site, you'll need to perform the following:
 
-* Ensure you have a GitHub public repository, which you've granted permissions to the [Utterances GitHub App](https://github.com/apps/utterances). 
-* Add the utterances toml parameters to the `[Params]` section in **config.toml** (shown below).
-* Ensure you have the `layouts/partials/utterances.html` file included in your themes directory.  This file embeds the actual Utterances script that gets output when you run through the configuration builder at [https://utteranc.es/](https://utteranc.es/).
-* Ensure you have the updated `layouts/_default/single.html` which has three lines (shown below) to insert Utterances in a specific location.   If you wish to put it somewhere else (or embed in additional pages), move those lines somewhere else.
+* Ensure you have a GitHub public repository, which you've granted permissions to the [Giscus GitHub App](https://github.com/apps/giscus). 
+* Follow the setup on Giscus](https://giscus.app/) with your preferred configuration and save the values in the params section of the config
 
 **config.toml**
 ```toml
 # Ensure the below 4 lines go within the [Params] section
-utterances = true  #Run the utterances script in _default/single.html to load https://utteranc.es comments
-utterancesRepo = "GHUsername/Repository.Name" # Utterances is enabled when this param is set
-utterancesTheme = "github-light" # Default: github-dark
-utterancesIssueTerm = "pathname" # Default: pathname
-```
+giscus = true  # Run the giscus script in _default/single.html to load https://giscus.app comments
+giscusTheme = "light" # Default: light
+giscusRepo = "GHUsername/Repository.Name" # the github repo where the discussions containing the blog post comments are saved
+giscusRepoId = ""
+giscusCategory = ""
+giscusCategoryId = ""
+giscusDiscussionMethod = "pathname" # Default: pathname. Supported methods: pathname, url, title, og:title
+giscusReactionsEnabled = true # Default: true
 
-**single.html**
-```
-{{ if .Site.Params.utterances }}
-  {{ template "partials/utterances.html" . }}
-{{ end }}
 ```
 
 ### Google Analytics
