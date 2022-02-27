@@ -1,7 +1,7 @@
 <article class="post-preview">
     <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ if .Params.subtitle }}
-    <h3 class="post-subtitle"><a href="{{ .Permalink }}">{{ .Params.subTitle }}</a></h3>
+    <h3 class="post-subtitle"><a href="{{ .Permalink }}">{{ .Params.subtitle }}</a></h3>
     {{ end }}
     {{ if .Params.image }}
     <a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" /></a>
