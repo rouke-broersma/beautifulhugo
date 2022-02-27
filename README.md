@@ -20,40 +20,7 @@ This theme is designed to look great on both large-screen and small-screen (mobi
 ### Syntax highlighting
 
 This theme has support for either Hugo's lightning fast Chroma, or both server side and client side highlighting. See [the Hugo docs for more](https://gohugo.io/content-management/syntax-highlighting/).
-
-#### Chroma - New server side syntax highlighting
-
-To enable Chroma, add the following to your site parameters:
-
-```
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-```
-
-Then, you can generate a different style by running:
-
-```
-hugo gen chromastyles --style=trac > static/css/syntax.css
-```
-
-#### Pygments - Old server side syntax highlighting
-
-To use this feature install Pygments (`pip install Pygments`) and add the following to your site parameters:
-
-```
-pygmentsStyle = "trac"
-pygmentsUseClassic = true
-```
-
-Pygments is mostly compatable with the newer Chroma. It is slower but has some additional theme options. I recommend Chroma over Pygments. Pygments will use `syntax.css` for highlighting, unless you also set the config `pygmentsUseClasses = false` which will generate the style code directly in the HTML file. 
-
-#### Highlight.js - Client side syntax highlighting
-```
-[Params]
-    useHLJS = true
-```
-
-Client side highlighting does not require pygments to be installed. This will use `highlight.min.css` instead of `syntax.css` for highlighting (effectively disabling Chroma). Highlight.js has a wider range of support for languages and themes, and an alternative highlighting engine.
+Also see [the markup docs](https://gohugo.io/getting-started/configuration-markup#highlight) for documentation on how to change the chroma settings.
 
 ### Disqus support
 
