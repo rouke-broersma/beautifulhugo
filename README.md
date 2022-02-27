@@ -99,7 +99,6 @@ giscusCategory = ""
 giscusCategoryId = ""
 giscusDiscussionMethod = "pathname" # Default: pathname. Supported methods: pathname, url, title, og:title
 giscusReactionsEnabled = true # Default: true
-
 ```
 
 ### Google Analytics
