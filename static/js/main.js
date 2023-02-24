@@ -185,18 +185,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       document.querySelector(this.getAttribute('href')).scrollIntoView();
   });
 });
-
-// Scroll navbar out of view when using hash
-// document.addEventListener('DOMContentLoaded', function() {
-
-//   $(window).on("load hashchange", function(e){
-//     let heading = document.getElementById(location.window.hash);
-//         // This ends the block to the window 
-//         // bottom and also aligns the view to the center 
-//     heading.scrollIntoView({
-//       block: 'end',
-//       behavior: 'smooth',
-//       inline: 'center'
-//     });
-//   });
-// });
