@@ -49,14 +49,9 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   scroll-margin-top: 150px;
-  scroll-behavior: smooth;
 }
 a {
   color: #008AFF;
-  scroll-behavior: smooth;
-}
-a.heading-anchor {
-  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
