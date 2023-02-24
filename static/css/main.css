@@ -48,7 +48,7 @@ p a {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 150px;
 }
 a {
   color: #008AFF;
