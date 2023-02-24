@@ -8,15 +8,6 @@ pre code.hljs {
   padding: 9.5px;
 }
 
-div.highlight {
-  max-width: 500px;
-}
-
-div.highlight pre {
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
 .highlight tr, .highlight pre {
   border: none;
 }
