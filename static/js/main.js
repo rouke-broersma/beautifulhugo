@@ -180,21 +180,28 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
-// Scroll navbar out of view when using hash
-document.addEventListener('DOMContentLoaded', function() {
-
-  $(window).on("load hashchange", function(e){
-      if(("" == window.location.hash) || (0 == $(".navbar").length)) return;
-      const navbarH = $(".navbar").height();
-      const adjustT = $(window.location.hash.replace(":", "\\:"))[0].getBoundingClientRect().top - navbarH;
-      if(0 > adjustT) {
-        $("html,body").animate(
-          {
-            scrollTop:("-=" + Math.abs(adjustT))
-          }, 
-          900
-        );
-      }
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center'
+      });
   });
 });
+
+// Scroll navbar out of view when using hash
+// document.addEventListener('DOMContentLoaded', function() {
+
+//   $(window).on("load hashchange", function(e){
+//     let heading = document.getElementById(location.window.hash);
+//         // This ends the block to the window 
+//         // bottom and also aligns the view to the center 
+//     heading.scrollIntoView({
+//       block: 'end',
+//       behavior: 'smooth',
+//       inline: 'center'
+//     });
+//   });
+// });
