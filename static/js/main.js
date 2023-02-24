@@ -180,3 +180,14 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+// Scroll navbar out of view when using hash
+document.addEventListener('DOMContentLoaded', function(){
+
+  $(window).on("load hashchange", function(e){
+      if(("" == window.location.hash) || (0 == $(".navbar").length)) return;
+      const navbarH = $(".navbar").height();
+      const adjustT = $(window.location.hash.replace(":", "\\:"))[0].getBoundingClientRect().top - navbarH;
+      if(0 > adjustT) $("html,body").animate({scrollTop:("-=" + Math.abs(adjustT))}, 300);
+  });
+});
